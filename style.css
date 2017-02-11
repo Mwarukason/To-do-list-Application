@@ -1,0 +1,18 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+.task {
+    background-color: #808080;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.task:after {
+    content: "";
+    display: table;
+    clear: both;
+}
