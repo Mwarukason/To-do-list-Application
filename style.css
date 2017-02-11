@@ -145,6 +145,11 @@ ul li.checked::before {
 
 }
 
-
+/*MEDIA RULLES For ANY SMART PHONES (Potrait and Landscape) */
+@media only screen and (min-width : 240px) and (max-width : 568px){
+       .container{
+        width:95%;
+      }
+}
 
 
