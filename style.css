@@ -137,5 +137,14 @@ ul li.checked::before {
   text-align: center;
 }
 
+/*MEDIA RULLES For Small Tablet/iPad (Potrait and Landscape) */
+@media only screen and (min-width : 569px) and (max-width : 767px){
+       .container{
+        width:95%;
+    }
+
+}
+
+
 
 
