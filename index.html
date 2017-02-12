@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <title> TODOLISTJS</title>
+    <style>
+        ul{
+            list-style:none;
+            padding:10px;
+            margin:10px;
+            float:left;
+            border:1px solid #333;
+            background:#eee;
+        }
+
+    </style>
+
+    <script>
+    /* toggle for displyin width to check devices for responsive design */
+          var showWidth = 1;
+
+          if(showWidth ==1){
+              $(document).ready(function() {
+                  $(window).resize(function(){
+                      var width = $(window).width();
+                      document.getElementById('output_width').innerHTML="Window Width:"+width.toString();
+                  });
+              });
+          }
+    </script>
+
