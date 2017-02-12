@@ -28,3 +28,40 @@ var makeTaskHtml = function(str, onCheck){
 
     return el;
 };
+
+    var addTask = function(task){
+    lists.todo_activ.appendChild(task);
+};
+    
+/*Check todo and done*/
+var onCheck = function(event){
+    var task = event.target.parentElement;
+    var list = task.parentElement.id;
+
+    lists[list === 'done_activ' ? 'todo_activ' : 'done_activ'].appendChild(task);
+    this.checked = false;
+    input.focus();
+};
+
+var onInput = function(){
+  /*remove white spaces*/
+    var str = input.value.trim();
+
+    if(str.length > 0){
+        addTask(makeTaskHtml(str, onCheck));
+        input.value = '';
+        input.focus();
+    }
+};
+
+/* set enter button to add input values*/
+btn.addEventListener('click', onInput);
+input.addEventListener('keyup', function(event){
+    var code = event.keyCode;
+
+    if(code === 13){
+        onInput();
+    }
+});
+input.focus();
+}());
