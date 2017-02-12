@@ -17,6 +17,7 @@
     clear: both;
 }
 
+/* styling the todo_activ box*/
 #todo_activ{
   background-color: #808080;
   color: black;
@@ -24,6 +25,8 @@
   text-decoration-color: #00FF00;
   width: 48%;
 }
+
+/* styling the done_activ box*/
 #done_activ{
   background-color: #808080;
   color: black;
@@ -90,9 +93,11 @@ ul li.checked::before {
 /* Style the header */
 .header {
     background-color: #008080;
-    padding: 30px 30px;
+    padding: 30px 40px;
+    margin: 10px;
     color: white;
     text-align: center;
+
 }
 
 /* Clear floats after the header */
@@ -105,18 +110,20 @@ ul li.checked::before {
 /* Style the input */
 #input {
     border: none;
-    width: 65%;
-    padding: 16px;
+    width: 48%;
+    /*padding: 10px; */
     float: left;
-    margin: 5px;
+    margin: 10px;
     font-size: 16px ;
+    padding: 12px 8px 12px 40px;
 }
 
 /* Style the "Add" button */
 #btn {
-    padding: 15px;
-    width: 25%;
-    margin: 5px;
+    /*padding: 10px;*/
+    padding: 12px 8px 12px 40px;
+    width: 48%;
+    margin: 10px;
     background: #d9d9d9;
     color: #555;
     float: left;
@@ -137,13 +144,21 @@ ul li.checked::before {
   text-align: center;
 }
 
-/*MEDIA RULLES For Small Tablet/iPad (Potrait and Landscape) */
-@media only screen and (min-width : 569px) and (max-width : 767px){
-       .container{
-        width:95%;
-    }
 
+/*MEDIA RULLES Tablet/iPad (Potrait and Landscape) */
+@media only screen and (min-width : 768px) and (max-width : 960px){
+    .container{
+        width:95%;
+      }
+
+      .header {
+          width: 95%;
+      }
+      .footer{
+
+      }
 }
+
 
 /*MEDIA RULLES For ANY SMART PHONES (Potrait and Landscape) */
 @media only screen and (min-width : 240px) and (max-width : 568px){
@@ -152,4 +167,23 @@ ul li.checked::before {
       }
 }
 
-
+/*MEDIA RULLES Tablet/iPad (Potrait and Landscape) */
+@media only screen and (min-width : 768px) and (max-width : 960px){
+    #container{
+        width:95%;
+}
+.header{
+    width:65%;
+    margin:auto;
+    display:block;
+    /*TRANSITION OF THE LOGO FROM ONE MEDIA 2 ANOTHER*/
+    transition: width 2s;
+}
+.footer{
+    width:65%;
+    margin:auto;
+    display:block;
+  /*TRANSITION OF THE LOGO FROM ONE MEDIA 2 ANOTHER*/
+    transition: width 2s;
+}
+}
